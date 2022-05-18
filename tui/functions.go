@@ -314,6 +314,7 @@ func playsong() {
 	index := myTui.playlist.GetCurrentItem()
 	audioplayer.PlaySong(myTui.playlist.GetCurrentItem())
 	updatePlayInfo()
+	updateAudioState()
 	myTui.playlist.SetCurrentItem(index)
 }
 
@@ -321,6 +322,7 @@ func previoussong() {
 	index := myTui.playlist.GetCurrentItem()
 	audioplayer.Previoussong()
 	updatePlayInfo()
+	updateAudioState()
 	myTui.playlist.SetCurrentItem(index)
 }
 
@@ -328,6 +330,7 @@ func nextsong() {
 	index := myTui.playlist.GetCurrentItem()
 	audioplayer.Nextsong()
 	updatePlayInfo()
+	updateAudioState()
 	myTui.playlist.SetCurrentItem(index)
 }
 
